@@ -6,7 +6,7 @@ import requests
 
 # シークレットキーの取得
 api_key = st.secrets["SAKURA_API_KEY"]
-endpoint = "https://api.sakura.ai/v1/chat/completions"
+endpoint = " https://api.ai.sakura.ad.jp/v1/chat/completions"
 
 
 # 背景画像の設定
