@@ -151,10 +151,9 @@ div[class*="stAlert"] {
 """, unsafe_allow_html=True)
 
 # 管理方法の表
-
 st.markdown("🌿 管理方法")
 
-if plant_name and st.button("クリックしてね 💧🌿"):
+if plant_name:
     prompt = f"""
     {plant_name} の室内管理方法を、園芸初心者にもわかるように、260字程度で完結させてください。
     {plant_name}が植物でない場合は{plant_name}の紹介をしてください。
