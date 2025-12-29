@@ -102,8 +102,8 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# UI用ボタン（見た目だけ）
-st.button("クリックしてね 💧🌿", key="ui_button")
+# ボタンを表示（中央揃えされる）
+st.button("クリックしてね 💧🌿")
 
 # 水やり頻度の補正ロジック
 def calculate_watering_frequency(base_days, location):
@@ -139,7 +139,7 @@ if plant_name and location:
     except Exception as e:
         st.error(f"CSVの読み込みに失敗しました。ファイルや列名をご確認ください。\n\n詳細: {e}")
 
-# warningスタイルの簡素化
+# ⚠ warningスタイルの簡素化（これは if-else の外でもOK）
 st.markdown("""
 <style>
 div[class*="stAlert"] {
@@ -151,10 +151,10 @@ div[class*="stAlert"] {
 """, unsafe_allow_html=True)
 
 # 管理方法の表
+
 st.markdown("🌿 管理方法")
 
-# AI実行ボタン
-if plant_name and st.button("クリックしてね 💧🌿", key="action_button"):
+if plant_name and st.button("クリックしてね 💧🌿"):
     prompt = f"""
     {plant_name} の室内管理方法を、園芸初心者にもわかるように、260字程度で完結させてください。
     {plant_name}が植物でない場合は{plant_name}の紹介をしてください。
@@ -188,5 +188,22 @@ if plant_name and st.button("クリックしてね 💧🌿", key="action_button
     except Exception as e:
         st.error(f"リクエスト中にエラーが発生しました: {e}")
 
+
 else:
     st.warning("植物の名前と置き場所をいれてボタンをクリックすると、管理方法のアドバイスが表示されます🌱")
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
