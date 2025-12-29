@@ -167,7 +167,7 @@ if plant_name:
     }
 
     body = {
-        "model": "llm-jp-3.1-8x13b-instruct4",
+        "model": "llm-jp-3.1.8x13b-instruct4",
         "messages": [
             {"role": "system", "content": "あなたはユーモアのある植物ケアの専門家です。"},
             {"role": "user", "content": prompt}
