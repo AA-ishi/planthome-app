@@ -173,7 +173,7 @@ if plant_name:
             {"role": "user", "content": prompt}
         ],
         "temperature": 0.7,
-        "max_tokens": 250
+        "max_tokens": 400
     }
 
     try:
