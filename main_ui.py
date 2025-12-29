@@ -102,8 +102,9 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# ボタンを表示（中央揃えされる）
-st.button("クリックしてね 💧🌿")
+col1, col2, col3 = st.columns([1, 1, 1])
+with col2:
+    action = st.button("クリックしてね 💧🌿", key="main_button")
 
 # 水やり頻度の補正ロジック
 def calculate_watering_frequency(base_days, location):
