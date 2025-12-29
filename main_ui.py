@@ -8,6 +8,9 @@ import requests
 api_key = st.secrets["SAKURA_API_KEY"]
 endpoint = "https://api.ai.sakura.ad.jp/v1/chat/completions"
 
+st.write("KEY HEAD:", api_key[:6])
+st.write("KEY TAIL:", api_key[-4:])
+
 
 # 背景画像の設定
 def set_background(image_path):
