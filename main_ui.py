@@ -102,6 +102,9 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# ボタンを表示（中央揃えされる）
+st.button("クリックしてね 💧🌿")
+
 # 水やり頻度の補正ロジック
 def calculate_watering_frequency(base_days, location):
     if location == "日がよく当たる窓際":
