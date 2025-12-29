@@ -179,6 +179,7 @@ if plant_name:
     try:
         response = requests.post(endpoint, headers=headers, json=body)
         result = response.json()
+        st.write(result)
 
         if "choices" in result and len(result["choices"]) > 0:
             advice = result["choices"][0]["message"]["content"]
