@@ -176,20 +176,23 @@ st.markdown("🌿 管理方法")
 
 if clicked and plant_name:
     prompt = f"""
-    {plant_name} の室内管理方法を、園芸初心者にもわかるように260字程度で完結させてください。
-    {plant_name}が植物でない場合は{plant_name}の紹介をしてください。
-    置き場所（屋内屋外どちらがいいのか）、温度、湿度、注意点を教えてください。
-    最後は育てるのが楽しくなるようなメッセージをつけてください。
+    {plant_name} の室内管理方法を園芸初心者でもわかるように書く。
+    260字程度でまとめる。
+    {plant_name}が植物でない場合は{plant_name}の紹介をする。
+    置き場所（屋内/屋外）、温度、湿度、注意点を含める。
+    最後は育てるのが楽しくなるようなメッセージをつけて。
     """
 
     payload = {
         "model": "llm-jp-3.1-8x13b-instruct4",
         "messages": [
-            {"role": "system", "content": "あなたはユーモアのある植物ケアの専門家です。"},
+            {"role": "system", "content": "あなたはあなたは親しみやすく、軽いユーモアを交えながら植物ケアの専門家です。
+  読者がクスッと笑えるような比喩や言い回しを1〜2か所入れてください。
+  ただし説明の正確さは保ち、ふざけすぎないでください。"},
             {"role": "user", "content": prompt}
         ],
         "temperature": 0.7,
-        "max_tokens": 250,
+        "max_tokens": 300,
     }
 
     with st.spinner("AIが考えています🌱"):
