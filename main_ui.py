@@ -10,6 +10,9 @@ import requests
 API_TOKEN = st.secrets["SAKURA_API_KEY"]
 AGENT_ID = st.secrets["SAKURA_AGENT_ID"]
 
+AGENT_ID = st.secrets["SAKURA_AGENT_ID"]
+print(AGENT_ID)  # ← ここで確認してみる
+
 API_URL = f"https://api.ai.sakura.ad.jp/v1/agent/{AGENT_ID}/chat/completions"
 
 HEADERS = {
