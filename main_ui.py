@@ -13,12 +13,12 @@ AGENT_ID = st.secrets["SAKURA_AGENT_ID"]
 AGENT_ID = st.secrets["SAKURA_AGENT_ID"]
 print(AGENT_ID)  # ← ここで確認してみる
 
-API_URL = f"https://api.ai.sakura.ad.jp/v1/agent/{AGENT_ID}/chat/completions"
+API_URL = "https://api.ai.sakura.ad.jp/v1/chat/completions"
 
 HEADERS = {
-    "Accept": "application/json",
-    "Authorization": f"Bearer {API_TOKEN}",
+    "Authorization": f"Bearer {st.secrets['SAKURA_API_KEY']}",
     "Content-Type": "application/json",
+}
 }
 
 # ===============================
@@ -196,7 +196,6 @@ if clicked and plant_name:
         ],
         "temperature": 0.7,
         "max_tokens": 400,
-        "stream": False
     }
 
     with st.spinner("AIが考えています🌱"):
