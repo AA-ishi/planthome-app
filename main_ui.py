@@ -83,6 +83,9 @@ st.markdown("""
 <div class='subtitle-text'>How to care for indoor plants</div>
 """, unsafe_allow_html=True)
 
+col1, col2, col3 = st.columns([1, 1, 1])
+with col2:
+    clicked = st.button("クリックしてね 💧🌿", key="main_button")
 # ===============================
 # 入力UI
 # ===============================
@@ -168,11 +171,6 @@ div[class*="stAlert"] {
 }
 </style>
 """, unsafe_allow_html=True)
-
-col1, col2, col3 = st.columns([1, 1, 1])
-with col2:
-    clicked = st.button("クリックしてね 💧🌿", key="main_button")
-
 
 # ===============================
 # AI 管理アドバイス（agent API）
