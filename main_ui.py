@@ -198,7 +198,7 @@ st.markdown("""
     }
 }
 
-/* ダークモード対応 */
+#/* ダークモード対応 */
 @media (prefers-color-scheme: dark) {
     .title-text {
         color: #fff;
