@@ -122,7 +122,7 @@ st.markdown("""
 
 col1, col2, col3 = st.columns([1, 1, 1])
 with col2:
-　　 action = st.button("クリックしてね 💧🌿", key="main_button")
+    action = st.button("クリックしてね 💧🌿", key="main_button")
 
 # ===============================
 # 水やり頻度計算
