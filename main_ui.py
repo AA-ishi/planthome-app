@@ -55,7 +55,7 @@ div.stButton > button:first-child {
 
 #/* タイトル */
 .title-text {
-    font-size: 44px;
+    font-size: 52px;
     font-weight: bold;
     color: white;
     text-align: center;
@@ -92,21 +92,7 @@ div.stButton > button:first-child {
     }
 }
 
-/* ダークモード対応 */
-@media (prefers-color-scheme: dark) {
-    .title-text {
-        color: #fff;
-        text-shadow: 0px 0px 4px #000;
-    }
-    .subtitle-text {
-        color: #eee;
-        text-shadow: none;
-    }
-    input, select, textarea {
-        background-color: #222 !important;
-        color: #fff !important;
-    }
-}
+
 </style>
 """, unsafe_allow_html=True)
 # ===============================
