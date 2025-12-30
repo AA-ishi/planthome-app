@@ -183,7 +183,7 @@ st.markdown("""
     margin-bottom: 10px;
 }
 
-/* スマホ最適化 */
+#/* スマホ最適化 */
 @media screen and (max-width: 480px) {
     .title-text {
         font-size: 32px;
