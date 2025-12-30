@@ -80,7 +80,6 @@ title-text {
 # ===============================
 st.markdown("""
 <div class='title-text'>室内観葉植物のお手入れ方法</div>
-<div class='subtitle-text'>How to care for indoor plants</div>
 """, unsafe_allow_html=True)
 
 # ===============================
@@ -165,6 +164,39 @@ div[class*="stAlert"] {
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
+}
+
+/* スマホ最適化 */
+@media screen and (max-width: 480px) {
+    .title-text {
+        font-size: 32px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+    .subtitle-text {
+        font-size: 18px;
+    }
+    input, select, textarea {
+        font-size: 16px;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background-color: #111 !important;
+        color: #eee !important;
+    }
+    .title-text {
+        color: #fff;
+        text-shadow: none;
+    }
+    .subtitle-text {
+        color: #ddd;
+        text-shadow: none;
+    }
+    input, select, textarea {
+        background-color: #222 !important;
+        color: #fff !important;
+    }
 }
 </style>
 """, unsafe_allow_html=True)
