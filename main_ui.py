@@ -8,11 +8,6 @@ import requests
 # Sakura AI（agent API）設定
 # ===============================
 API_TOKEN = st.secrets["SAKURA_API_KEY"]
-AGENT_ID = st.secrets["SAKURA_AGENT_ID"]
-
-AGENT_ID = st.secrets["SAKURA_AGENT_ID"]
-print(AGENT_ID)  # ← ここで確認してみる
-
 API_URL = "https://api.ai.sakura.ad.jp/v1/chat/completions"
 
 HEADERS = {
