@@ -19,8 +19,6 @@ HEADERS = {
     "Authorization": f"Bearer {st.secrets['SAKURA_API_KEY']}",
     "Content-Type": "application/json",
 }
-}
-
 # ===============================
 # 背景画像設定
 # ===============================
