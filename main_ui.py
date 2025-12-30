@@ -222,7 +222,7 @@ st.markdown("""
 @media (prefers-color-scheme: dark) {
     .title-text {
         color: #fff;
-        text-shadow: 0px 0px 4px #000; /* 影を弱くして視認性UP */
+        text-shadow: 0px 0px 4px #000; 
     }
     .subtitle-text {
         color: #eee;
