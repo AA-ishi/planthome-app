@@ -198,6 +198,19 @@ div[class*="stAlert"] {
         color: #fff !important;
     }
 }
+/* ===============================
+   ダークモード対応（PC・スマホ共通）
+   =============================== */
+@media (prefers-color-scheme: dark) {
+    .title-text {
+        color: #fff;
+        text-shadow: 0px 0px 4px #000; /* 影を弱くして視認性UP */
+    }
+    .subtitle-text {
+        color: #eee;
+        text-shadow: none;
+    }
+}
 </style>
 """, unsafe_allow_html=True)
 
