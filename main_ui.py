@@ -37,7 +37,7 @@ def set_background(image_path):
 set_background("appback20250822.png")
 
 # ===============================
-# 共通CSS
+# 共通CSS（タイトル＋スマホ＋ダークモード全部ここ）
 # ===============================
 st.markdown("""
 <style>
@@ -50,9 +50,11 @@ input, select, textarea {
     background-color: #ffffff !important;
 }
 div.stButton > button:first-child {
-        color: #333 !important;
+    color: #333 !important;
 }
-title-text {
+
+#/* タイトル */
+.title-text {
     font-size: 44px;
     font-weight: bold;
     color: white;
@@ -62,9 +64,11 @@ title-text {
          2px -2px 0 #000,
         -2px  2px 0 #000,
          2px  2px 0 #000;
- 　　margin-top: 10px;
-     margin-bottom: 8px;
+    margin-top: 10px;
+    margin-bottom: 8px;
 }
+
+/* サブタイトル */
 .subtitle-text {
     font-size: 24px;
     color: white;
@@ -72,9 +76,39 @@ title-text {
     text-shadow: 1px 1px 2px #000;
     margin-bottom: 10px;
 }
+
+/* スマホ最適化 */
+@media screen and (max-width: 480px) {
+    .title-text {
+        font-size: 32px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+    .subtitle-text {
+        font-size: 18px;
+    }
+    input, select, textarea {
+        font-size: 16px;
+    }
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+    .title-text {
+        color: #fff;
+        text-shadow: 0px 0px 4px #000;
+    }
+    .subtitle-text {
+        color: #eee;
+        text-shadow: none;
+    }
+    input, select, textarea {
+        background-color: #222 !important;
+        color: #fff !important;
+    }
+}
 </style>
 """, unsafe_allow_html=True)
-
 # ===============================
 # タイトル
 # ===============================
@@ -155,82 +189,6 @@ if plant_name and location:
             st.warning("水やりの頻度は育て方を参考にしてください。")
     except Exception as e:
         st.error(f"CSVの読み込みに失敗しました: {e}")
-
-# ===============================
-# ⚠ warningスタイル簡素化（復活）
-# ===============================
-st.markdown("""
-<style>
-.title-text {
-    font-size: 44px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    text-shadow:
-        -2px -2px 0 #000,
-         2px -2px 0 #000,
-        -2px  2px 0 #000,
-         2px  2px 0 #000;
-    margin-top: 10px;
-    margin-bottom: 8px;
-}
-
-.subtitle-text {
-    font-size: 24px;
-    color: white;
-    text-align: center;
-    text-shadow: 1px 1px 2px #000;
-    margin-bottom: 10px;
-}
-
-#/* スマホ最適化 */
-@media screen and (max-width: 480px) {
-    .title-text {
-        font-size: 32px;
-        margin-top: 6px;
-        margin-bottom: 6px;
-    }
-    .subtitle-text {
-        font-size: 18px;
-    }
-    input, select, textarea {
-        font-size: 16px;
-    }
-}
-
-#/* ダークモード対応 */
-@media (prefers-color-scheme: dark) {
-    .title-text {
-        color: #fff;
-        text-shadow: 0px 0px 4px #000;
-    }
-    .subtitle-text {
-        color: #eee;
-        text-shadow: none;
-    }
-    input, select, textarea {
-        background-color: #222 !important;
-        color: #fff !important;
-    }
-}
-</style>
-""", unsafe_allow_html=True)
-
-#===============================
-#  ダークモード対応（PC・スマホ共通）
-# =============================== */
-@media (prefers-color-scheme: dark) {
-    .title-text {
-        color: #fff;
-        text-shadow: 0px 0px 4px #000; 
-    }
-    .subtitle-text {
-        color: #eee;
-        text-shadow: none;
-    }
-}
-</style>
-""", unsafe_allow_html=True)
 
 # ===============================
 # AI 管理アドバイス（agent API）
