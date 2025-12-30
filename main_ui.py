@@ -185,17 +185,19 @@ if clicked and plant_name:
 
     payload = {
         "model": "llm-jp-3.1-8x13b-instruct4",
-       "messages": [
-    {
-        "role": "system",
-        "content": (
-            "あなたは親しみやすく、軽いユーモアを交えながら植物ケアの専門家です。\n"
-            "読者がクスッと笑えるような比喩や言い回しを1〜2か所入れてください。\n"
-            "ただし説明の正確さは保ち、ふざけすぎないでください。"
-        )
-    },
-]
-            {"role": "user", "content": prompt}
+        "messages": [
+            {
+                "role": "system",
+                "content": (
+                    "あなたは親しみやすく、軽いユーモアを交えながら植物ケアの専門家です。\n"
+                    "読者がクスッと笑えるような比喩や言い回しを1〜2か所入れてください。\n"
+                    "ただし説明の正確さは保ち、ふざけすぎないでください。"
+                )
+            },
+            {
+                "role": "user",
+                "content": prompt
+            }
         ],
         "temperature": 0.7,
         "max_tokens": 300,
