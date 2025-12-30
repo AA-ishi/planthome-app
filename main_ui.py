@@ -80,6 +80,7 @@ title-text {
 # ===============================
 st.markdown("""
 <div class='title-text'>室内観葉植物のお手入れ方法</div>
+<div class='subtitle-text'>How to care for indoor plants</div>
 """, unsafe_allow_html=True)
 
 # ===============================
@@ -160,10 +161,26 @@ if plant_name and location:
 # ===============================
 st.markdown("""
 <style>
-div[class*="stAlert"] {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+.title-text {
+    font-size: 44px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.subtitle-text {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000;
+    margin-bottom: 10px;
 }
 
 /* スマホ最適化 */
@@ -180,17 +197,15 @@ div[class*="stAlert"] {
         font-size: 16px;
     }
 }
+
+/* ダークモード対応 */
 @media (prefers-color-scheme: dark) {
-    html, body {
-        background-color: #111 !important;
-        color: #eee !important;
-    }
     .title-text {
         color: #fff;
-        text-shadow: none;
+        text-shadow: 0px 0px 4px #000;
     }
     .subtitle-text {
-        color: #ddd;
+        color: #eee;
         text-shadow: none;
     }
     input, select, textarea {
@@ -198,6 +213,8 @@ div[class*="stAlert"] {
         color: #fff !important;
     }
 }
+</style>
+""", unsafe_allow_html=True)
 /* ===============================
    ダークモード対応（PC・スマホ共通）
    =============================== */
