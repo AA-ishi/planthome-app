@@ -62,7 +62,7 @@ input, select, textarea {
     color: white !important;
     text-align: center !important;
     text-transform: uppercase !important;
-    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke: １px black;
     margin-top: 30px;
     margin-bottom: 10px;
 }
@@ -76,10 +76,10 @@ input, select, textarea {
     margin-bottom: 10px;
 }
 
-/* スマホ最適化 */
+#/* スマホ最適化 */
 @media screen and (max-width: 480px) {
     .title-text {
-        font-size: 28px !important;
+        font-size: 26px !important;
         line-height: 1.2;
         margin-top: 10px;
     }
@@ -104,19 +104,19 @@ input, select, textarea {
     }
 }
 
-/* ボタン */
+#/* ボタン */
 .stButton > button {
     display: block;
     margin: 0 auto;
     background-color: #ffe4e1 !important;
-    color: #333 !important;
+    color: #335 !important;
     border: none;
     padding: 0.6em 1.2em;
     font-size: 16px;
     border-radius: 6px;
 }
 
-/* info / warning の背景透明＋文字グリーン */
+#/* info / warning の背景透明＋文字グリーン */
 div[data-testid="stNotification"] {
     background-color: rgba(0,0,0,0) !important;
     color: #228B22 !important;
