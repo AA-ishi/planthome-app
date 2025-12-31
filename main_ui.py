@@ -77,7 +77,6 @@ input, select, textarea {
 }
 
 st.markdown("""
-<style>
 .stButton button {
     display: block;
     margin: 0 auto;
@@ -92,7 +91,7 @@ st.markdown("""
     max-width: 100% !important;
     cursor: pointer;
 }
-</style>
+
 """, unsafe_allow_html=True)
 
 /* スマホ最適化 */
