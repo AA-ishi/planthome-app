@@ -14,6 +14,7 @@ HEADERS = {
     "Authorization": f"Bearer {st.secrets['SAKURA_API_KEY']}",
     "Content-Type": "application/json",
 }
+
 # ===============================
 # 背景画像設定
 # ===============================
@@ -37,33 +38,31 @@ def set_background(image_path):
 set_background("appback20250822.png")
 
 # ===============================
-# 共通CSS（タイトル＋スマホ＋ダークモード全部ここ）
+# 共通CSS（タイトル・スマホ・通知色）
 # ===============================
 st.markdown("""
 <style>
+
+/* 全体の色 */
 html, body, [class*="css"] {
     color: #000 !important;
     background-color: rgba(255, 255, 255, 0.0) !important;
 }
+
+/* 入力欄 */
 input, select, textarea {
     color: #000 !important;
     background-color: #ffffff !important;
 }
-div.stButton > button:first-child {
-    color: #333 !important;
-}
 
-#/* タイトル */
+/* タイトル（白抜き・大文字・中央揃え） */
 .title-text {
-    font-size: 48px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    text-shadow:
-        -2px -2px 0 #000,
-         2px -2px 0 #000,
-        -2px  2px 0 #000,
-         2px  2px 0 #000;
+    font-size: 48px !important;
+    font-weight: 900 !important;
+    color: white !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    -webkit-text-stroke: 2px black;
     margin-top: 30px;
     margin-bottom: 10px;
 }
@@ -80,21 +79,47 @@ div.stButton > button:first-child {
 /* スマホ最適化 */
 @media screen and (max-width: 480px) {
     .title-text {
-        font-size: 32px;
-        margin-top: 6px;
-        margin-bottom: 6px;
+        font-size: 28px !important;
+        line-height: 1.2;
+        margin-top: 10px;
     }
     .subtitle-text {
-        font-size: 18px;
+        font-size: 16px !important;
     }
     input, select, textarea {
-        font-size: 16px;
+        width: 100% !important;
+        font-size: 18px !important;
+    }
+    .stButton > button {
+        width: 100% !important;
+        font-size: 18px !important;
+        padding: 0.8em !important;
     }
 }
 
+/* ボタン */
+.stButton > button {
+    display: block;
+    margin: 0 auto;
+    background-color: #ffe4e1 !important;
+    color: #333 !important;
+    border: none;
+    padding: 0.6em 1.2em;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+/* info / warning の背景透明＋文字グリーン */
+div[data-testid="stNotification"] {
+    background-color: rgba(0,0,0,0) !important;
+    color: #228B22 !important;
+    border: none !important;
+    font-weight: bold;
+}
 
 </style>
 """, unsafe_allow_html=True)
+
 # ===============================
 # タイトル
 # ===============================
@@ -114,28 +139,13 @@ location = st.selectbox(
         "あまり日が当たらない窓際",
         "明るいけれど窓際ではない場所",
         "日が当たらない場所"
-     ],
+    ],
     key="location_select"
 )
 
 # ===============================
-# ボタン（サイズ・装飾復活）
+# ボタン
 # ===============================
-st.markdown("""
-<style>
-.stButton > button {
-    display: block;
-    margin: 0 auto;
-    background-color: #ffe4e1 !important;
-    color: #333 !important;
-    border: none;
-    padding: 0.6em 1.2em;
-    font-size: 16px;
-    border-radius: 6px;
-}
-</style>
-""", unsafe_allow_html=True)
-
 col1, col2, col3 = st.columns([1, 1, 1])
 with col2:
     clicked = st.button("クリックしてね 💧🌿", key="main_button")
@@ -168,8 +178,8 @@ if plant_name and location:
             st.markdown("💧 水やり頻度")
             st.write(
                 f"{adjusted_days} 日ごとに水やりをしてみましょう。"
-                "お水をあげるときは鉢底から水が流れ出るぐらいタップリあげてください。"
-                "植物の様子をみて頻度を変えることも必要です。"
+                "鉢底から水が流れるくらいたっぷりあげてください。"
+                "植物の様子を見て調整することも大切です。"
             )
         else:
             st.warning("水やりの頻度は育て方を参考にしてください。")
@@ -185,9 +195,9 @@ if clicked and plant_name:
     prompt = f"""
     {plant_name} の管理方法を小学生でもわかるように書く。
     300文字以内でまとめる。
-    {plant_name}が植物を含むときは育てる環境（屋内/屋外）、温度、湿度、注意点を含める。
-    {plant_name}が植物ではない場合は{plant_name}の紹介をする。
-    最後は育てるのが楽しくなるようなメッセージをつけて。
+    {plant_name} が植物の場合は、育てる環境（屋内/屋外）、温度、湿度、注意点を含める。
+    植物でない場合は {plant_name} の紹介を書く。
+    最後は育てるのが楽しくなるメッセージをつける。
     """
 
     payload = {
@@ -195,16 +205,18 @@ if clicked and plant_name:
         "messages": [
             {
                 "role": "system",
-                "content": (
-                    "あなたは親しみやすく、ユーモアのある植物を育てる専門家です。"                                   
-                )
+                "content": "あなたは親しみやすくユーモアのある植物の専門家です。必ず指示に従います。"
             },
             {
                 "role": "user",
                 "content": prompt
+            },
+            {
+                "role": "assistant",
+                "content": "了解しました。指定された条件に従って回答します。"
             }
         ],
-        "temperature": 0.7,
+        "temperature": 0.5,
         "max_tokens": 300,
     }
 
