@@ -98,7 +98,7 @@ input, select, textarea {
     padding: 6px;
     }
 
- .stButton > button {
+ .stButton button {
     display: block;
     margin: 0 auto;
     background-color: #e33b95 !important;
@@ -107,7 +107,7 @@ input, select, textarea {
     padding: 0.6em 1.2em;
     font-size: 16px;
     border-radius: 6px;
-    white-space: nowrap; /* ← これで1行表示に */
+    white-space: nowrap;
     cursor: pointer;
 }
 
@@ -189,9 +189,9 @@ if clicked and plant_name:
     prompt = f"""
     {plant_name} の管理方法を小学生でもわかるように説明して。
     300文字以内でまとめる。
-    {plant_name} が植物の場合は、育てる環境（屋内/屋外）、温度、湿度、注意点を含める。
-    植物でない場合は {plant_name} の紹介を書く。
-    最後は育てるのが楽しくなるメッセージをつける。
+    {plant_name} が植物の場合は、育てる環境（屋内/屋外）、温度、湿度、注意点を含めてください。
+    植物でない場合は {plant_name} の紹介を書いてください。
+    最後は育てるのが楽しくなるメッセージをつけてください。
     """
 
     payload = {
@@ -199,7 +199,7 @@ if clicked and plant_name:
         "messages": [
             {
                 "role": "system",
-                "content": "あなたは親しみやすい植物を育てる専門家です、300文字以内で回答します。"
+                "content": "あなたは親しみやすい植物を育てる専門家です、300文字以内で回答する。"
             },
             {
                 "role": "user",
@@ -207,7 +207,7 @@ if clicked and plant_name:
             },
             {
                 "role": "assistant",
-                "content": "了解しました。小学生でもわかるように300文字程度で回答します。"
+                "content": "了解しました。小学生でもわかるように300文字程度で回答する。"
             }
         ],
         "temperature": 0.7,
