@@ -55,7 +55,7 @@ input, select, textarea {
     background-color: #ffffff !important;
 }
 
-/* タイトル（白抜き・大文字・中央揃え） */
+/* タイトル */
 .title-text {
     font-size: 48px !important;
     font-weight: 900 !important;
@@ -76,7 +76,7 @@ input, select, textarea {
     margin-bottom: 10px;
 }
 
-st.markdown("""
+/* ★ ボタン（PCでもスマホでも効く） */
 .stButton button {
     display: block;
     margin: 0 auto;
@@ -91,8 +91,6 @@ st.markdown("""
     max-width: 100% !important;
     cursor: pointer;
 }
-
-""", unsafe_allow_html=True)
 
 /* スマホ最適化 */
 @media screen and (max-width: 480px) {
@@ -118,6 +116,7 @@ st.markdown("""
 }
 
 </style>
+""", unsafe_allow_html=True)
 """, unsafe_allow_html=True)
 
 # ===============================
