@@ -76,7 +76,21 @@ input, select, textarea {
     margin-bottom: 10px;
 }
 
-#/* スマホ最適化 */
+/* ボタン（PCでもスマホでも効く） */
+.stButton button {
+    display: block;
+    margin: 0 auto;
+    background-color: #e33b95 !important;
+    color: #fff !important;
+    border: none;
+    padding: 0.6em 1.2em;
+    font-size: 16px;
+    border-radius: 6px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+/* スマホ最適化 */
 @media screen and (max-width: 480px) {
     .title-text {
         font-size: 26px !important;
@@ -91,24 +105,12 @@ input, select, textarea {
         font-size: 18px !important;
     }
     select {
-    background-color: #ffffff !important;
-    color: #000 !important;
-    border: 1px solid #ccc !important;
-    border-radius: 6px;
-    padding: 6px;
+        background-color: #ffffff !important;
+        color: #000 !important;
+        border: 1px solid #ccc !important;
+        border-radius: 6px;
+        padding: 6px;
     }
-
- .stButton button {
-    display: block;
-    margin: 0 auto;
-    background-color: #e33b95 !important;
-    color: #fff !important;
-    border: none;
-    padding: 0.6em 1.2em;
-    font-size: 16px;
-    border-radius: 6px;
-    white-space: nowrap;
-    cursor: pointer;
 }
 
 </style>
