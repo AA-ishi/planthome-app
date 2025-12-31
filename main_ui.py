@@ -100,7 +100,7 @@ input, select, textarea {
     .stButton > button {
         width: 100% !important;
         font-size: 18px !important;
-        padding: 0.8em !important;
+        padding: 0.9em !important;
     }
 }
 
