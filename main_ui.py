@@ -185,8 +185,8 @@ if clicked and plant_name:
     prompt = f"""
     {plant_name} の管理方法を小学生でもわかるように書く。
     300文字以内でまとめる。
-    {plant_name}が植物ではない場合は{plant_name}の紹介をする。
     {plant_name}が植物を含むときは育てる環境（屋内/屋外）、温度、湿度、注意点を含める。
+    {plant_name}が植物ではない場合は{plant_name}の紹介をする。
     最後は育てるのが楽しくなるようなメッセージをつけて。
     """
 
