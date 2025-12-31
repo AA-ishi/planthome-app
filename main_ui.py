@@ -80,10 +80,10 @@ input, select, textarea {
 .stButton button {
     display: block;
     margin: 0 auto;
-    background-color: #e33b95 !important;
+    background-color: #2deb49 !important;
     color: #fff !important;
     border: none;
-    padding: 0.6em 1.2em;
+    padding: 0.6em 1.5em;
     font-size: 16px;
     border-radius: 6px;
     white-space: nowrap;
