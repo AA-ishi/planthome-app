@@ -191,11 +191,11 @@ if plant_name and location:
 st.markdown("🌿 管理方法")
 
 if clicked and plant_name:
-    prompt = f"""{plant_name}の管理方法を小学生でもわかるように説明して。
-300文字以内でまとめる。
-{plant_name}が植物の場合は、育てる環境（屋内/屋外）、温度、湿度、注意点を含めてください。
-植物でない場合は{plant_name}の紹介を書いてください。
-最後は育てるのが楽しくなるメッセージをつけてください。"""
+    prompt = f"{plant_name}の管理方法を小学生でもわかるように説明して。\n" \
+             "300文字以内でまとめる。\n" \
+             f"{plant_name}が植物の場合は、育てる環境（屋内/屋外）、温度、湿度、注意点を含めてください。\n" \
+             f"植物でない場合は{plant_name}の紹介を書いてください。\n" \
+             "最後は育てるのが楽しくなるメッセージをつけてください。"
 
     payload = {
         "model": "llm-jp-3.1-8x13b-instruct4",
