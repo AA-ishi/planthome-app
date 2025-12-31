@@ -83,10 +83,12 @@ input, select, textarea {
     background-color: #2deb49 !important;
     color: #fff !important;
     border: none;
-    padding: 0.6em 1.5em;
+    padding: 0.6em 1.2em;
     font-size: 16px;
     border-radius: 6px;
     white-space: nowrap;
+    width: fit-content !important; 
+    max-width: 100%; 
     cursor: pointer;
 }
 
