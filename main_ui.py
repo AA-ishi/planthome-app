@@ -97,31 +97,18 @@ input, select, textarea {
     border-radius: 6px;
     padding: 6px;
     }
-    .stButton > button {
-        width: 100% !important;
-        font-size: 18px !important;
-        padding: 0.9em !important;
-    }
-}
 
-#/* ボタン */
-.stButton > button {
+ .stButton > button {
     display: block;
     margin: 0 auto;
     background-color: #e33b95 !important;
-    color: #333 !important;
+    color: #fff !important;
     border: none;
     padding: 0.6em 1.2em;
     font-size: 16px;
     border-radius: 6px;
-}
-
-#/* info / warning の背景透明＋文字グリーン */
-div[data-testid="stNotification"] {
-    background-color: rgba(0,0,0,0) !important;
-    color: #228B22 !important;
-    border: none !important;
-    font-weight: bold;
+    white-space: nowrap; /* ← これで1行表示に */
+    cursor: pointer;
 }
 
 </style>
