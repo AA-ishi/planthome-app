@@ -62,7 +62,7 @@ input, select, textarea {
     color: white !important;
     text-align: center !important;
     text-transform: uppercase !important;
-    -webkit-text-stroke: １px black;
+    -webkit-text-stroke: 1px black;
     margin-top: 30px;
     margin-bottom: 10px;
 }
@@ -108,8 +108,8 @@ input, select, textarea {
 .stButton > button {
     display: block;
     margin: 0 auto;
-    background-color: #ffe4e1 !important;
-    color: #335 !important;
+    background-color: #e33b95 !important;
+    color: #333 !important;
     border: none;
     padding: 0.6em 1.2em;
     font-size: 16px;
@@ -155,7 +155,7 @@ location = st.selectbox(
 # ===============================
 col1, col2, col3 = st.columns([1, 1, 1])
 with col2:
-    clicked = st.button("💧 クリックしてね 🌿", key="main_button")
+    clicked = st.button("💧タップかクリックしてね 🌿", key="main_button")
 
 # ===============================
 # 水やり頻度計算
