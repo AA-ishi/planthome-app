@@ -91,7 +91,11 @@ input, select, textarea {
         font-size: 18px !important;
     }
     select {
-    background-color: rgba(255,255,255,0.5) !important;
+    background-color: #ffffff !important;
+    color: #000 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 6px;
+    padding: 6px;
     }
     .stButton > button {
         width: 100% !important;
