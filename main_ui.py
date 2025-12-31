@@ -76,21 +76,24 @@ input, select, textarea {
     margin-bottom: 10px;
 }
 
-/* ボタン（PCでもスマホでも効く） */
+st.markdown("""
+<style>
 .stButton button {
     display: block;
     margin: 0 auto;
-    background-color: #2deb49 !important;
+    background-color: #e33b95 !important;
     color: #fff !important;
     border: none;
     padding: 0.6em 1.2em;
     font-size: 16px;
     border-radius: 6px;
     white-space: nowrap;
-    width: fit-content !important; 
-    max-width: 100%; 
+    width: fit-content !important;
+    max-width: 100% !important;
     cursor: pointer;
 }
+</style>
+""", unsafe_allow_html=True)
 
 /* スマホ最適化 */
 @media screen and (max-width: 480px) {
