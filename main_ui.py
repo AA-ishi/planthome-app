@@ -193,7 +193,7 @@ st.markdown("🌿 管理方法")
 
 if clicked and plant_name:
     prompt = f"""
-    {plant_name} の管理方法を小学生でもわかるように書く。
+    {plant_name} の管理方法を小学生でもわかるように説明して。
     300文字以内でまとめる。
     {plant_name} が植物の場合は、育てる環境（屋内/屋外）、温度、湿度、注意点を含める。
     植物でない場合は {plant_name} の紹介を書く。
@@ -205,7 +205,7 @@ if clicked and plant_name:
         "messages": [
             {
                 "role": "system",
-                "content": "あなたは親しみやすくユーモアのある植物の専門家です。必ず指示に従います。"
+                "content": "あなたは親しみやすくユーモアのある植物を育てる専門家です。必ず指示に従います。"
             },
             {
                 "role": "user",
@@ -213,7 +213,7 @@ if clicked and plant_name:
             },
             {
                 "role": "assistant",
-                "content": "了解しました。指定された条件に従って回答します。"
+                "content": "了解しました。プロンプトに従って回答します。"
             }
         ],
         "temperature": 0.5,
