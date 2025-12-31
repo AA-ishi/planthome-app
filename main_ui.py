@@ -90,6 +90,9 @@ input, select, textarea {
         width: 100% !important;
         font-size: 18px !important;
     }
+    select {
+    background-color: rgba(255,255,255,0.5) !important;
+    }
     .stButton > button {
         width: 100% !important;
         font-size: 18px !important;
@@ -148,7 +151,7 @@ location = st.selectbox(
 # ===============================
 col1, col2, col3 = st.columns([1, 1, 1])
 with col2:
-    clicked = st.button("クリックしてね 💧🌿", key="main_button")
+    clicked = st.button("💧 クリックしてね 🌿", key="main_button")
 
 # ===============================
 # 水やり頻度計算
@@ -205,7 +208,7 @@ if clicked and plant_name:
         "messages": [
             {
                 "role": "system",
-                "content": "あなたは親しみやすくユーモアのある植物を育てる専門家です。必ず指示に従います。"
+                "content": "あなたは親しみやすくユーモアのある植物を育てる専門家です。"
             },
             {
                 "role": "user",
@@ -213,14 +216,14 @@ if clicked and plant_name:
             },
             {
                 "role": "assistant",
-                "content": "了解しました。プロンプトに従って回答します。"
+                "content": "了解しました。小学生でもわかるように300文字程度で回答します。"
             }
         ],
         "temperature": 0.5,
         "max_tokens": 300,
     }
 
-    with st.spinner("AIが考えています🌱"):
+    with st.spinner("国産AIが考えています🌱"):
         r = requests.post(API_URL, headers=HEADERS, json=payload)
 
     if r.status_code == 200:
