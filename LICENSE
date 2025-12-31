@@ -1,37 +1,41 @@
-MIT License
+AA-ishi カスタムライセンス
+Version 1.0 (2025)
 
-<<<<<<< HEAD
-Copyright (c) 2025 Asako
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software with restriction, including the rights to use, copy, modify,
-merge, publish, distribute, sublicense, and/or sell copies of the Software,
-subject to the following conditions:
-
-※ The above rights are granted only to the original author and affiliated accounts under her control.  
-※ Unauthorized copying, reproduction, modification, or distribution by third parties is strictly prohibited.  
-※ This repository is intended for personal and controlled use only.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND...
-=======
 Copyright (c) 2025 AA-ishi
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+本ソフトウェアは、個人の非商用利用に限り、コピーおよび改変を許可します。
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+ただし、以下の行為は禁止します（事前に作者の許可が必要です）:
+- 本ソフトウェアの再配布（改変後のものを含む）
+- 商用利用
+- 企業・団体・組織による利用
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
->>>>>>> 7901b90f739aa0bbd21a2830083168d1ada6f677
+本ソフトウェアを利用する際は、以下のクレジット表記を必ず残してください:
+© 2025 AA-ishi
+
+本ソフトウェアは「現状のまま」提供され、いかなる保証も行いません。
+本ソフトウェアの利用により生じたいかなる損害についても、作者は責任を負いません。
+
+商用利用・企業利用をご希望の場合は、事前に作者へご連絡ください。
+
+
+AA-ishi Custom License
+Version 1.0 (2025)
+
+Copyright (c) 2025 AA-ishi
+
+Permission is granted to individuals to copy and modify this software for personal, non-commercial use only.
+
+The following actions are NOT permitted without prior written permission from the author:
+- Redistribution of the original software
+- Redistribution of modified versions of the software
+- Commercial use of the software
+- Use of the software by corporations, organizations, or groups
+
+Users must retain the following credit in any usage of this software:
+© 2025 AA-ishi
+
+This software is provided "as is", without warranty of any kind, express or implied. 
+The author shall not be held liable for any damages or losses arising from the use of this software.
+
+For commercial or corporate use, please contact the author for permission.
