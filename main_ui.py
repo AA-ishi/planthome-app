@@ -55,7 +55,7 @@ div.stButton > button:first-child {
 
 #/* タイトル */
 .title-text {
-    font-size: 52px;
+    font-size: 48px;
     font-weight: bold;
     color: white;
     text-align: center;
@@ -64,8 +64,8 @@ div.stButton > button:first-child {
          2px -2px 0 #000,
         -2px  2px 0 #000,
          2px  2px 0 #000;
-    margin-top: 10px;
-    margin-bottom: 8px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 /* サブタイトル */
